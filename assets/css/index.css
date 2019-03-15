@@ -165,3 +165,80 @@ figure{
     height: inherit;
     flex-wrap: inherit;
 }
+
+.footer{
+    background-color: #f5b810de;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    /*align-items: center;*/
+}
+
+.footer img{
+    vertical-align: middle;
+}
+
+.footer a{
+    color: white;
+}
+
+.event-list {
+display: flex;
+flex-wrap: wrap;
+}
+
+.event-list img{
+    padding: 2px;
+    display: flex;
+    align-self: center;
+    
+}
+.contact {
+    background-color: #ffa805;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+
+.social-link.twitter{
+    background-image: url(/assets/images/tw.png);
+}
+
+.social-link.facebook{
+    background-image: url(/assets/images/fb.png);
+}
+
+.social-link.instagram{
+    background-image: url(/assets/images/ig.png);
+}
+
+.form-email input {
+    border-color: gray;
+    padding: 5px 20px 5px 25px;
+    border-style: solid;
+}
+
+.form-email button {
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    /*padding: 5px;*/
+    border-radius: 5px;
+    width: 100px;
+    margin: 10px auto 0;
+}
+
+.form-email h3 {
+     font-family: 'Source Sans Pro', sans-serif;
+}
