@@ -8,7 +8,7 @@ body{
     display:flex;
     height: 80px;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 .header ol li {
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-    font-size: 40px;
+    font-size: 2em;
     line-height:  1.5;
     letter-spacing: -.2;
     color: #64b5f6;
@@ -98,32 +98,23 @@ h2{
     margin-top: ;*/
 }
 
-.jumbotron{
-    height: 300px;
-    background-color: #fff8e1;
-    /*background-size: 350px 250px;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position-x: right;*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-image {
-    object-fit: cover;
-}
-.project-course{
-    margin: 10px 0;
+.project-course,
+.project-date,
+.project-url{
+    margin: .3em 0;
 }
 
 .project-title{
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-bottom: .3em;
 }
 
 .project-details{
-    width: 500px;
+    width: 50%;
+}
+
+.project-imageContainer {
+    width: 50%;
 }
 
 .project-description{
@@ -133,6 +124,23 @@ h2{
 .project strong{
 font-family: 'Fjalla One', sans-serif;
 }
+
+.jumbotron{
+    height: auto;
+    background-color: #fff8e1;
+    /*background-size: 350px 250px;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-x: right;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* responsive*/
+}
+
+.hero-image {
+    position: absolute;
+}
+
 
 .menu{
     height: inherit;
@@ -157,7 +165,9 @@ figure{
     
 .container {
     /*border: 1px solid red;*/
-    width: 1000px;
+    max-width: 1000px; /*comienza RESPONSIVE*/
+    width: 100%; /*Responsive*/
+    flex: 1; /*toma todo el ancho disponible del elemento*/ 
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -165,7 +175,6 @@ figure{
     height: inherit;
     flex-wrap: inherit;
 }
-
 .footer{
     background-color: #f5b810de;
     color: white;
@@ -173,6 +182,7 @@ figure{
     justify-content: space-between;
     height: 80px;
     /*align-items: center;*/
+    flex-wrap: wrap;
 }
 
 .footer img{
@@ -182,28 +192,57 @@ figure{
 .footer a{
     color: white;
 }
-
 .event-list {
-display: flex;
-flex-wrap: wrap;
-}
-
-.event-list img{
-    padding: 2px;
     display: flex;
-    align-self: center;
-    
-}
+    flex-wrap: wrap;
+  }
+  .event-list-title {
+    margin-left: 20px;
+  }
+  .event { 
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4fbff;
+  }
+  .event img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+  .event-description {
+    text-align: left;
+  }
+  
+  .event-url {
+    color: #056fff;
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
 .contact {
     background-color: #ffa805;
     color: white;
     height: 150px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: inherit;
 }
 .social-link {
-    display: inline-block;
+    display: flex;
+    flex-wrap: start;
     width: 50px;
     height: 50px;
     background-size: 50px 50px;
@@ -211,15 +250,15 @@ flex-wrap: wrap;
 }
 
 .social-link.twitter{
-    background-image: url(/assets/images/tw.png);
+    background-image: url(../images/tw.png);
 }
 
 .social-link.facebook{
-    background-image: url(/assets/images/fb.png);
+    background-image: url(../images/fb.png);
 }
 
 .social-link.instagram{
-    background-image: url(/assets/images/ig.png);
+    background-image: url(../images/ig.png);
 }
 
 .form-email input {
